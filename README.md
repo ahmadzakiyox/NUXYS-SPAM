@@ -13,7 +13,7 @@
 ---
 
 ## ⚡ Apa itu NUXYS-SPAM?
-**NUXYS-SPAM** adalah *tools* otomatisasi pengiriman pesan (Spam) tingkat lanjut yang didesain khusus dengan **kecepatan tinggi** dan **keamanan enkripsi berlapis** (Bytecode > LZMA > ZLIB > AES-256 > B85 > XOR). Tools ini sangat tangguh dan dilengkapi dengan sistem lisensi berbasis Hardware ID (HWID) untuk mencegah pembajakan.
+**NUXYS-SPAM** adalah *tools* otomatisasi pengiriman pesan (Spam) tingkat lanjut yang didesain khusus dengan **kecepatan tinggi** dan **keamanan enkripsi berlapis (Military-Grade Protection)**. Tools ini sangat tangguh dan dilengkapi dengan sistem lisensi berbasis Hardware ID (HWID) untuk mencegah pembajakan.
 
 ---
 
