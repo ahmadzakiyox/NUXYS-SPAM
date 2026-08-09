@@ -24,6 +24,17 @@
 
 ---
 
+## 📸 Tampilan Program
+Berikut adalah cuplikan antarmuka dari NUXYS-SPAM:
+
+**🔹 Halaman Login (License Verification)**
+<img src="assets/license_screen.png" width="600" alt="License Screen">
+
+**🔹 Command Center (Menu Utama)**
+<img src="assets/main_menu.png" width="600" alt="Main Menu">
+
+---
+
 ## 🛠️ Instalasi & Cara Penggunaan
 
 Ikuti instruksi berikut untuk mulai menggunakan program:
