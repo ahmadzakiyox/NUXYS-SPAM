@@ -1,5 +1,4 @@
 requests
 colorama
 urllib3
-pycryptodome
 curl_cffi
