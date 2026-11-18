@@ -12,15 +12,15 @@
 ---
 
 ## ⚡ Apa itu NUXYS-SPAM?
-**NUXYS-SPAM** adalah *tools* otomatisasi pengiriman pesan tingkat lanjut yang dirancang untuk performa dan kecepatan maksimal. Dilengkapi dengan sistem keamanan canggih dan proteksi anti-ban mutakhir, menjadikan *tools* ini salah satu yang terbaik di kelasnya.
+**NUXYS-SPAM** adalah *tools* otomatisasi pengiriman pesan tingkat lanjut yang dirancang untuk performa dan kecepatan maksimal. Dilengkapi dengan sistem keamanan canggih, enkripsi berlapis 7 Lapis Bumi, dan proteksi anti-ban mutakhir, menjadikan *tools* ini salah satu yang terbaik di kelasnya.
 
 ---
 
 ## ✨ Fitur Unggulan
 - 🚀 **Performa Ekstrem**: Mengeksekusi ratusan perintah dalam hitungan detik tanpa jeda.
-- 🛡️ **Keamanan Tingkat Tinggi**: Menggunakan sistem proteksi eksklusif untuk kenyamanan pengguna.
+- 🛡️ **Keamanan 7 Lapis Bumi**: Terproteksi sistem kriptografi multi-layer anti-hooking & anti-tamper.
 - 🌐 **Sistem Auto-Bypass**: Melewati berbagai rintangan proteksi jaringan secara mulus.
-- 💻 **Desain Elegan**: Antarmuka berbasis teks (CLI) yang futuristik dan mudah digunakan.
+- 💻 **Desain Elegan**: Antarmuka terminal interaktif (CLI) futuristik Neo-Brutalist yang intuitif.
 
 ---
 
@@ -40,16 +40,17 @@ Berikut adalah cuplikan antarmuka dari NUXYS-SPAM:
 Ikuti instruksi berikut untuk mulai menggunakan program:
 
 ### 1. Persiapan
-Pastikan Python sudah terinstal di perangkat Anda. Buka terminal/CMD dan jalankan perintah berikut untuk menginstal dependensi:
+Pastikan Python sudah terinstal di perangkat Anda (PC / Termux Android). Buka terminal/CMD dan jalankan perintah berikut untuk menginstal dependensi:
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 2. Jalankan Program
-Mulai program dengan mengeksekusi file utama:
+Mulai program antarmuka interaktif:
 ```bash
-python main.py
+python cli_interactive.py
 ```
+*(Atau gunakan `python main.py` untuk mode CLI langsung)*
 
 ### 3. Aktivasi Lisensi
 Saat pertama kali masuk, Anda akan dimintai **Kode Lisensi** rahasia. 
